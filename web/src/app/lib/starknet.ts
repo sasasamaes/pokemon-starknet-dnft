@@ -1,6 +1,6 @@
-import { Provider, Contract } from 'starknet';
+import { Provider, Contract, defaultProvider } from 'starknet';
 
-const provider = new Provider({ baseUrl: 'https://alpha4.starknet.io' });
+const provider = defaultProvider;
 
 //TODO: Reemplaza con la dirección de tu contrato, se puede obtener en starkscan.co
 const contractAddress = 'DIRECCIÓN_DEL_CONTRATO_DESPLEGADO'; 
@@ -10,4 +10,4 @@ const abi = require('../../target/release/pokemonstarknetdnft.json');
 
 const contract = new Contract(abi, contractAddress, provider);
 
-export default contract;
+export { contract, provider };

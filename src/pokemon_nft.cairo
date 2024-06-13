@@ -1,5 +1,9 @@
 %lang starknet
 
+from starkware.cairo.common.cairo_builtins import HashBuiltin
+from starkware.cairo.common.math import assert_nn
+from starkware.starknet.common.storage import Storage
+
 struct Pokemon {
     name: felt,
     image_url: felt,
